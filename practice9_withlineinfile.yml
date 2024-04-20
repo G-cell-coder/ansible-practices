@@ -1,0 +1,9 @@
+---
+- name: changing the domain name only 
+  hosts: all
+  tasks:
+     name: changing of the domain name to yahoo.com 
+     lineinfile:
+            path: /etc/hosts 
+            regex: '^8.8.8.8         google.com'
+            line: '8.8.8.8         yahoo.com' 

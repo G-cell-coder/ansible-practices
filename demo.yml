@@ -1,0 +1,12 @@
+---
+- name: test 
+  hosts: 192.168.122.1 
+  gather_facts: false 
+  tasks: 
+    - name: print the users 
+      shell: hostname 
+      register: pc1_name
+    - name: test the ouput
+      debug:
+         msg: "{{ pc1_name }}"
+

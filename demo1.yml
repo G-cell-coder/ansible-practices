@@ -1,0 +1,9 @@
+---
+- name: Create a file
+  hosts: local
+  tasks: 
+    - name: create file testing
+      file: 
+	path: /home/vm/google.txt
+state: touch
+
