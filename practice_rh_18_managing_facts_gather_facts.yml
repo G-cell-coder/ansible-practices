@@ -1,0 +1,11 @@
+---
+- name: This play does not automatically gather any facts
+  hosts: all
+  gather_facts: yes 
+
+  tasks:
+    - name: Manually gather facts
+      ansible.builtin.setup:
+        gather_subset:
+          - hardware
+

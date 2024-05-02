@@ -1,0 +1,8 @@
+---
+- name: synchronize
+  hosts: my_local
+  tasks:
+   - name: synchronize local file to remote files
+     ansible.posix.synchronize: 
+      src: /var/tmp/ans.txt 
+      dest: /home/vm/ansible-practices/ans-synch.txt 

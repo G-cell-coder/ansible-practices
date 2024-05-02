@@ -1,6 +1,6 @@
 ---
 - name: test 
-  hosts: 192.168.122.1 
+  hosts: all  
   gather_facts: false 
   tasks: 
     - name: print the users 

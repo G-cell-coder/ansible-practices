@@ -1,0 +1,17 @@
+---
+- name: Simple Loops
+  hosts: my_local
+  gather_facts: true
+  
+  tasks:
+    - name: Postfix is running
+      ansible.builtin.service:
+        name: postfix
+        state: started
+
+    - name: Dovecot is running
+      ansible.builtin.service:
+        name: dovecot
+        state: started
+
+
