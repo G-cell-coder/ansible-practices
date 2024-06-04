@@ -1,0 +1,15 @@
+---
+- name: Test
+  hosts: all 
+  tasks:
+     - name:  Install apache 
+       yum:
+         name: "{{ ansible_facts.ansible_local.needed.general.package }}"
+         state: present 
+
+     - name: Start and enable httpd
+       service:
+         name: "{{  ansible_facts.ansible_local.needed.general.service }}"
+         state: "{{  ansible_facts.ansible_local.needed.general.state }}"
+         enabled: "{{ ansible_facts.ansible_local.needed.general.enabled }}"
+...

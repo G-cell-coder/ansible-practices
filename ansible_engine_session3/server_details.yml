@@ -1,0 +1,8 @@
+---
+- name: Server details
+  hosts: all
+  tasks:
+    - name: server details
+      debug:
+        msg: "IP address = {{ ansible_default_ipv4.address }} , Mac address= {{ ansible_default_ipv4.macaddress }}"
+...

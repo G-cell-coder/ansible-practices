@@ -1,0 +1,161 @@
+2024-06-04 01:22:00,034 p=1141 u=root n=ansible | PLAY [Stat example] ***************************************************************************************
+2024-06-04 01:22:00,042 p=1141 u=root n=ansible | TASK [Check directory] ************************************************************************************
+2024-06-04 01:22:00,500 p=1141 u=root n=ansible | ok: [172.21.0.2]
+2024-06-04 01:22:00,501 p=1141 u=root n=ansible | ok: [172.21.0.4]
+2024-06-04 01:22:00,504 p=1141 u=root n=ansible | TASK [Display the output] *********************************************************************************
+2024-06-04 01:22:00,527 p=1141 u=root n=ansible | ok: [172.21.0.4] => {
+    "output": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python"
+        }, 
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1717463487.729916, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "unknown", 
+            "ctime": 1717463409.715695, 
+            "dev": 103, 
+            "device_type": 0, 
+            "executable": true, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 2205202, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": true, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": false, 
+            "issock": false, 
+            "isuid": false, 
+            "mimetype": "unknown", 
+            "mode": "0755", 
+            "mtime": 1717463409.715695, 
+            "nlink": 2, 
+            "path": "/var/www/vhost/", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 4096, 
+            "uid": 0, 
+            "version": null, 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": true, 
+            "xoth": true, 
+            "xusr": true
+        }
+    }
+}
+2024-06-04 01:22:00,532 p=1141 u=root n=ansible | ok: [172.21.0.2] => {
+    "output": {
+        "ansible_facts": {
+            "discovered_interpreter_python": "/usr/bin/python"
+        }, 
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1717463409.715695, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "unknown", 
+            "ctime": 1717463409.715695, 
+            "dev": 99, 
+            "device_type": 0, 
+            "executable": true, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 2205201, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": true, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": false, 
+            "issock": false, 
+            "isuid": false, 
+            "mimetype": "unknown", 
+            "mode": "0755", 
+            "mtime": 1717463409.715695, 
+            "nlink": 2, 
+            "path": "/var/www/vhost/", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 4096, 
+            "uid": 0, 
+            "version": null, 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": true, 
+            "xoth": true, 
+            "xusr": true
+        }
+    }
+}
+2024-06-04 01:22:00,534 p=1141 u=root n=ansible | TASK [Creating directory] *********************************************************************************
+2024-06-04 01:22:00,555 p=1141 u=root n=ansible | skipping: [172.21.0.4]
+2024-06-04 01:22:00,560 p=1141 u=root n=ansible | skipping: [172.21.0.2]
+2024-06-04 01:22:00,564 p=1141 u=root n=ansible | TASK [Register example] ***********************************************************************************
+2024-06-04 01:22:00,993 p=1141 u=root n=ansible | fatal: [172.21.0.2]: FAILED! => {"changed": true, "cmd": "systemctl status httpd", "delta": "0:00:00.110391", "end": "2024-06-04 01:22:00.963180", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:22:00.852789", "stderr": "Failed to get D-Bus connection: Operation not permitted", "stderr_lines": ["Failed to get D-Bus connection: Operation not permitted"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:22:00,993 p=1141 u=root n=ansible | ...ignoring
+2024-06-04 01:22:00,994 p=1141 u=root n=ansible | fatal: [172.21.0.4]: FAILED! => {"changed": true, "cmd": "systemctl status httpd", "delta": "0:00:00.111100", "end": "2024-06-04 01:22:00.963780", "msg": "non-zero return code", "rc": 1, "start": "2024-06-04 01:22:00.852680", "stderr": "Failed to get D-Bus connection: Operation not permitted", "stderr_lines": ["Failed to get D-Bus connection: Operation not permitted"], "stdout": "", "stdout_lines": []}
+2024-06-04 01:22:00,995 p=1141 u=root n=ansible | ...ignoring
+2024-06-04 01:22:00,997 p=1141 u=root n=ansible | TASK [Display sshd output] ********************************************************************************
+2024-06-04 01:22:01,019 p=1141 u=root n=ansible | ok: [172.21.0.4] => {
+    "httpd_output": {
+        "changed": true, 
+        "cmd": "systemctl status httpd", 
+        "delta": "0:00:00.111100", 
+        "end": "2024-06-04 01:22:00.963780", 
+        "failed": true, 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2024-06-04 01:22:00.852680", 
+        "stderr": "Failed to get D-Bus connection: Operation not permitted", 
+        "stderr_lines": [
+            "Failed to get D-Bus connection: Operation not permitted"
+        ], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+}
+2024-06-04 01:22:01,024 p=1141 u=root n=ansible | ok: [172.21.0.2] => {
+    "httpd_output": {
+        "changed": true, 
+        "cmd": "systemctl status httpd", 
+        "delta": "0:00:00.110391", 
+        "end": "2024-06-04 01:22:00.963180", 
+        "failed": true, 
+        "msg": "non-zero return code", 
+        "rc": 1, 
+        "start": "2024-06-04 01:22:00.852789", 
+        "stderr": "Failed to get D-Bus connection: Operation not permitted", 
+        "stderr_lines": [
+            "Failed to get D-Bus connection: Operation not permitted"
+        ], 
+        "stdout": "", 
+        "stdout_lines": []
+    }
+}
+2024-06-04 01:22:01,026 p=1141 u=root n=ansible | PLAY RECAP ************************************************************************************************
+2024-06-04 01:22:01,026 p=1141 u=root n=ansible | 172.21.0.2                 : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   
+2024-06-04 01:22:01,026 p=1141 u=root n=ansible | 172.21.0.4                 : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=1   
