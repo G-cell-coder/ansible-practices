@@ -1,0 +1,12 @@
+---
+- name: test 
+  hosts: all  
+  gather_facts: false 
+  tasks: 
+    - name: print the users 
+      shell: hostname 
+      register: pc1_name
+    - name: test the ouput
+      debug:
+         msg: "{{ pc1_name }}"
+

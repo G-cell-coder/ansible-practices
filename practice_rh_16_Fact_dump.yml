@@ -1,0 +1,7 @@
+---
+- name: Fact dump
+  hosts: all
+  tasks:
+    - name: Print all facts
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts['fqdn'] }} and {{  ansible_facts['fqdn'] }}"

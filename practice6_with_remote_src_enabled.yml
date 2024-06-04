@@ -1,0 +1,10 @@
+---
+- name: copy from ansible to clients
+  hosts: all
+  tasks:
+    - name: copy from /var/tmp to client /var/tmp
+      copy:
+        src: /var/tmp/ans.txt
+        dest: /tmp
+        remote_src: True
+

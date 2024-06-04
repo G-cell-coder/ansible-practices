@@ -1,0 +1,11 @@
+---
+- name: create user accounts for all our servers
+  hosts: all 
+  become: True
+  vars_files:
+    - secrets_chapter3-managing-facts_excercise3.yml 
+  tasks:
+    - name: Creating user from secret.yml
+      ansible.builtin.user:
+        name: "{{  grep vm /etc/passwd | cut -d: -f1 }}"
+        password: "{{ chapter3-secret  }}" 

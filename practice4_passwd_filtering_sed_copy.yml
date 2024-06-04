@@ -1,0 +1,23 @@
+---
+- name: create a file
+  hosts: all
+  gather_facts: true 
+  tasks:
+     - name: check if the user exist
+       shell: grep vm /etc/passwd | cut -d":" -f1
+       register: user_exist
+       
+     - name: print our output
+       debug:
+          msg: "{{ user_exist.stdout }}"
+          
+     - name: stop the process
+       fail:
+          msg: the user is exist
+       when: user_exist.stdout == "sam" 
+ 
+     - name: create a file /var/tmp
+       file:
+         path: /var/tmp/file.txt
+         state: touch      
+     

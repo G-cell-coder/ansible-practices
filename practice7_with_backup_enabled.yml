@@ -1,0 +1,10 @@
+---
+- name: copy from ansible to clients
+  hosts: all
+  tasks:
+    - name: copy from /etc/hosts  to client /etc/hosts 
+      copy:
+        src: /etc/hosts 
+        dest: /etc/hosts 
+        backup: True
+

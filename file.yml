@@ -1,0 +1,10 @@
+---
+- name: create a file
+  hosts: local
+  tasks:
+     - name: create at /var/tmp
+       file:
+         path: /var/tmp/file.txt
+         state: touch
+
+

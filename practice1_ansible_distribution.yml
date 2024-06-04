@@ -1,0 +1,9 @@
+---
+- name: test
+  hosts: all
+  gather_facts: true 
+  tasks: 
+     - name: just print
+       debug:
+          msg: "{{ ansible_distribution }}" 
+       when: ansible_distribution == "Ubuntu"

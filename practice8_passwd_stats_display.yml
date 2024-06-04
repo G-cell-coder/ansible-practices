@@ -1,0 +1,14 @@
+---
+- name: Examine all stat ouput of /etc/passwd
+  hosts: 192.168.49.1 
+  
+  tasks:
+    - name: stat /etc/passwd
+      ansible.builtin.stat:
+        path: /etc/passwd
+      register: results
+
+    - name: Display stat results
+      debug:
+        var: results 
+          

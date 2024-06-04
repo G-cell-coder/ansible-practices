@@ -1,0 +1,12 @@
+---
+- name: test
+  hosts: all
+  gather_facts: true 
+  tasks: 
+     - name: just print
+       shell: grep vm /etc/passwd
+       register: Output_V
+       
+     - name: test the output
+       debug:
+          msg: "{{ Output_V.stdout }}"
